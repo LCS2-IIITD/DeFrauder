@@ -345,7 +345,7 @@ co=0
 while len(G.edges())>0:
 
     co=co+1
-    print str(co)+"\t"+str(len(G.edges()))
+    print (str(co)+"\t"+str(len(G.edges())))
 
     cmnrevrsedges2={}
     cmnrevrslist2={}
@@ -590,6 +590,6 @@ for us in CC_mapper:
 with open(args.dg, 'w') as fp:
     json.dump(grps, fp) 
 
-print 'end'            
+print ('end')            
 
     

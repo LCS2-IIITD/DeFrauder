@@ -353,8 +353,8 @@ def create_groups():
         v=5
         for grp in finalgrps:
             
-            finalgrps[grp]['users']=map(int, finalgrps[grp]['users'])
-            finalgrps[grp]['prods']=map(int, finalgrps[grp]['prods'])
+            finalgrps[grp]['users']=list(map(int, finalgrps[grp]['users']))
+            finalgrps[grp]['prods']=list(map(int, finalgrps[grp]['prods']))
 
 
             if len(finalgrps[grp]['users'])>1:
@@ -412,4 +412,4 @@ grps2={}
 create_groups()
 with open(args.outputgroups, 'w') as fp:
     json.dump(grps2, fp)  
-print 'end'
+print ('end')
